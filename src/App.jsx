@@ -3,17 +3,18 @@ import "./App.css";
 
 function App() {
   const [arrayOfTasks, setArrayofTasks] = useState([
-    { task: "test1", desc: "vacuum your room" },
-    { task: "test2", desc: "feed the cat" },
+    { task: "test1", desc: "vacuum your room", id: 12345 },
+    { task: "test2", desc: "feed the cat", id: 23456 },
   ]);
-  //probably not the best key system since people might add more of the same task
-  let mappedTasks = arrayOfTasks.map((task) => <Task {...task} key={task.task} />);
+
+  let mappedTasks = arrayOfTasks.map((task) => <Task {...task} key={task.id} />);
 
   function addTask(e) {
     e.preventDefault();
     const task = e.target[0].value;
     const desc = e.target[1].value;
-    let newArray = arrayOfTasks.concat([{ task: `${task}`, desc: `${desc}` }]);
+    const id = Math.random() * 10000;
+    let newArray = arrayOfTasks.concat([{ task: `${task}`, desc: `${desc}`, id: `${id}` }]);
     setArrayofTasks(newArray);
   }
 
