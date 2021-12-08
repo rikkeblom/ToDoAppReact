@@ -36,6 +36,16 @@ p {
   font-size: calc(10px + 1vmin);
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
 input[type="checkbox"] {
   margin-top: 1rem;
   transform: scale(2);
