@@ -11,15 +11,37 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
+  width: 300px;
+  min-height: calc(100vh - 2rem);
+  margin: 1rem auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .taskContainer {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin: 1rem 2rem;
+}
+
+.taskContainer div {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+section {
+  width: 100%;
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  margin-top: 2rem;
+  background-image: linear-gradient(to right, #282c34, grey, #282c34);
 }
 
 section label {
@@ -32,21 +54,28 @@ p {
   margin: 0;
 }
 
-.desc {
-  font-size: calc(10px + 1vmin);
-}
-
 form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-h2 {
-  margin-bottom: 0;
+h2,
+h3 {
+  margin: 0;
 }
 
+h1 {
+}
 input[type="checkbox"] {
   margin-top: 1rem;
   transform: scale(2);
+}
+
+.deleteButton {
+  background-color: #ff000000;
+  color: grey;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
