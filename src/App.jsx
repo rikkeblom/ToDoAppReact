@@ -45,13 +45,13 @@ function App() {
           type="checkbox"
           name="task"
           checked={props.complete}
-          id={props.task}
+          id={props.id}
           onChange={() => {
             toggleComplete(props.id);
           }}
         />
         <div>
-          <label htmlFor={props.task}>
+          <label htmlFor={props.id}>
             <h3>{props.task}</h3>
             <p className="desc">{props.desc}</p>
           </label>
